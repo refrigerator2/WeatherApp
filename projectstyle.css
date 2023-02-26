@@ -1,7 +1,9 @@
 .head{
     height: 200px;
     max-width:100%;
-    background-color: skyblue;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/006/061/511/small_2x/blue-clear-sky-background-free-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -37,8 +39,8 @@
         width: 1280px;
     }
 }
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 800px) {
     head{
-        width: 1920xp;
+        width: 800px;
     }
 }
