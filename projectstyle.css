@@ -62,8 +62,7 @@
     .name {
         font-size: 18px;
         }
-    
-        /* Изменяем расположение и размеры инпутов */
+   
         .inputs {
             display: block;
             margin-top: 10px;
@@ -73,12 +72,11 @@
             margin-bottom: 10px;
         }
         
-        /* Изменяем размер и ширину кнопки */
         .btn {
             margin-top: 10px;
         }
         
-        /* Дополнительные стили для улучшения внешнего вида */
+    
         body {
             background-color: #f2f2f2;
         }
