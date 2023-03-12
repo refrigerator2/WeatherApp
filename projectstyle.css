@@ -1,7 +1,7 @@
-.head{
+/* .head{
     height: 200px;
     max-width:100%;
-    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/006/061/511/small_2x/blue-clear-sky-background-free-vector.jpg);
+    background-image: url(https://img.freepik.com/premium-vector/blue-sky-background-with-clouds_336924-3550.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display:flex;
@@ -43,4 +43,218 @@
     head{
         width: 800px;
     }
-}
+} */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+@media only screen and (max-width: 320px) {
+    .name {
+        font-size: 18px;
+        }
+    
+        /* Изменяем расположение и размеры инпутов */
+        .inputs {
+            display: block;
+            margin-top: 10px;
+        }
+        .lat, .lon {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        /* Изменяем размер и ширину кнопки */
+        .btn {
+            margin-top: 10px;
+        }
+        
+        /* Дополнительные стили для улучшения внешнего вида */
+        body {
+            background-color: #f2f2f2;
+        }
+        .name {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .lat, .lon {
+            font-size: 16px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .btn {
+            background-color: #4CAF50;
+            font-size: 16px;
+            padding: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        }
+        
+        
+        
+        
+
+/* Стили для разрешения экрана 768px */
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+    .name {
+        font-size: 24px;
+    }
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .lat, .lon {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Изменяем размер и ширину кнопки */
+    .btn {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    /* Дополнительные стили для улучшения внешнего вида */
+    body {
+        background-color: #f2f2f2;
+    }
+    .name {
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .lat, .lon {
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .btn {
+        background-color: #4CAF50;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    }
+
+/* Стили для разрешения экрана 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .name {
+      font-size: 28px;
+    }
+    .inputs {
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+        align-items: center;
+      }
+    .lat, .lon {
+      width: 40%;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+    .btn {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      
+  }
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .name {
+      font-size: 32px;
+    }
+    .inputs {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .lat, .lon {
+      width: 30%;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+    .btn {
+      margin-top: 0;
+      width: 15%;
+    }
+  }
+  @media only screen and (min-width: 1441px) {
+    .name {
+      font-size: 36px;
+    }
+    .inputs {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .lat, .lon {
+      width: 25%;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+    .btn {
+      margin-top: 0;
+      width: 10%;
+    }
+  }
+  /* Общие стили */
+  .name {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  .inputs {
+    display: flex;
+    align-items: center;
+  }
+  .lat, .lon {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
