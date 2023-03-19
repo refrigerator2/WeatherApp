@@ -1,49 +1,16 @@
-/* .head{
-    height: 200px;
-    max-width:100%;
-    background-image: url(https://img.freepik.com/premium-vector/blue-sky-background-with-clouds_336924-3550.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+select {
+  appearance: none;
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
 }
-.name{
-    font-size: 40px;
-    color: yellow;
+select:focus {
+  outline: none;
+  border-color: #007bff;
 }
-.city{
-    height: 40px;
-    box-sizing: border-box;
-}
-.city:focus {
-    color: #212529;
-    background-color: #fff;
-    border-color: #bdbdbd;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
-  }
-
-  @media screen and (max-width: 1920px) {
-    head{
-        width: 1920px;
-    }
-}
-@media screen and (max-width: 1600px) {
-    head{
-        width: 1600px;
-    }
-}
-@media screen and (max-width: 1280px) {
-    head{
-        width: 1280px;
-    }
-}
-@media screen and (max-width: 800px) {
-    head{
-        width: 800px;
-    }
-} */
 .container {
     display: flex;
     flex-direction: column;
@@ -62,7 +29,8 @@
     .name {
         font-size: 18px;
         }
-   
+    
+      
         .inputs {
             display: block;
             margin-top: 10px;
@@ -72,11 +40,11 @@
             margin-bottom: 10px;
         }
         
+      
         .btn {
             margin-top: 10px;
         }
-        
-    
+      
         body {
             background-color: #f2f2f2;
         }
@@ -120,14 +88,12 @@
         width: 100%;
         margin-bottom: 20px;
     }
-    
-    /* Изменяем размер и ширину кнопки */
+
     .btn {
         margin-top: 20px;
         width: 100%;
     }
     
-    /* Дополнительные стили для улучшения внешнего вида */
     body {
         background-color: #f2f2f2;
     }
@@ -161,7 +127,6 @@
     .inputs {
         display: flex;
         flex-direction: row;
-        /* justify-content: space-between; */
         align-items: center;
       }
     .lat, .lon {
@@ -225,7 +190,7 @@
       width: 10%;
     }
   }
-  /* Общие стили */
+ 
   .name {
     font-family: Arial, sans-serif;
     font-weight: bold;
