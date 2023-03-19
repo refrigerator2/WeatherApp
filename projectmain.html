@@ -9,13 +9,18 @@
     <body>
         <div class="head">
             <div class="name">WeatherApp<span class=""> | &nbsp</div>
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                    <option value="fr">Français</option>
+                </select>
             <div class="inputs">
                 <input class="lat" placeholder="Please input your latitude">
                 <input class="lon" placeholder="Please input your longitude">
-                <button class="btn" onclick="getLocation()">Get Weather</button>
+                <button class="btn">Get Weather</button>
             </div>
-            
            <script src="projectlogic.js"></script>
         </div>
+        
     </body>
 </html>
