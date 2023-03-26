@@ -1,23 +1,16 @@
 
-	const lat = document.getElementsByClassName("lat").value;
-	const lon = document.getElementsByClassName("lon").value;
+	const city = document.getElementsByClassName('city')[0]
 	const btn = document.getElementsByClassName("btn")[0];
 
 	const akey = 'a412a1788e338d0074a61750c01f41b8';
-	const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${akey}`;
+	const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${akey}`;
 
-	function getLL(){
-		return lat, lon;
-	}
-	btn.addEventListener('click', function(){
-		fetch(url)
+	function getData(){
+	fetch(url).then(function(response){
+		response.json().then(function(data) {
+			console.log(data);
+		});
 	})
-	 
-	const languageSelector = document.getElementById('language');
-	languageSelector.addEventListener('change', function() {
-    const selectedLanguage = languageSelector.value;
-    const script = document.createElement('script');
-    script.src = `lang_${selectedLanguage}.js`;
-    document.head.appendChild(script);
-});
-		
+	}
+
+	btn.addEventListener('click', getData)
