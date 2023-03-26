@@ -35,7 +35,7 @@ select:focus {
             display: block;
             margin-top: 10px;
         }
-        .lat, .lon {
+        .city {
             width: 100%;
             margin-bottom: 10px;
         }
@@ -53,7 +53,7 @@ select:focus {
             text-align: center;
             margin-bottom: 10px;
         }
-        .lat, .lon {
+        .city {
             font-size: 16px;
             padding: 8px;
             border: none;
@@ -84,7 +84,7 @@ select:focus {
         flex-direction: column;
         margin-top: 20px;
     }
-    .lat, .lon {
+    .city {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -102,7 +102,7 @@ select:focus {
         text-align: center;
         margin-bottom: 10px;
     }
-    .lat, .lon {
+    .city {
         font-size: 18px;
         padding: 10px;
         border: none;
@@ -129,7 +129,7 @@ select:focus {
         flex-direction: row;
         align-items: center;
       }
-    .lat, .lon {
+    .city {
       width: 40%;
       margin-right: 10px;
       margin-bottom: 0;
@@ -159,7 +159,7 @@ select:focus {
       align-items: center;
       margin-top: 40px;
     }
-    .lat, .lon {
+    .city {
       width: 30%;
       margin-right: 10px;
       margin-bottom: 0;
@@ -180,7 +180,7 @@ select:focus {
       align-items: center;
       margin-top: 50px;
     }
-    .lat, .lon {
+    .city {
       width: 25%;
       margin-right: 20px;
       margin-bottom: 0;
@@ -199,7 +199,7 @@ select:focus {
     display: flex;
     align-items: center;
   }
-  .lat, .lon {
+  .city {
     font-family: Arial, sans-serif;
     font-size: 16px;
     padding: 10px;
