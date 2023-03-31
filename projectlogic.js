@@ -5,7 +5,9 @@
 	
 	function createContent(data){
 		const div = document.createElement('div')
-		div.innerText= data.list.main
+		console.log(data)
+		const wt = data.list[0].main.temp
+		div.innerText= wt;
 		const p = document.createElement('p')
 		p.setAttribute('id', "box")
 		rep.append(p)
@@ -21,11 +23,11 @@
 	}
 
 	function postData(){
-		getData().then(function(response){
-			response.json().then(function(data) {
-			const div=document.createElement('div')
-			div.innerText= data.list.main
-			rep.append(div)
+		getData()
+		.then(function(response){
+			response.json()
+			.then(function(data) {
+			createContent(data)
 		});
 	})
 	}
