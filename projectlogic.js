@@ -1,8 +1,17 @@
 
-	
+	const rep = document.getElementById('rep')
 	const city = document.getElementById('city');
-	const btn = document.getElementsByClassName("btn")[0];
+	const btn = document.getElementById("btn");
 	
+	function createContent(data){
+		const div = document.createElement('div')
+		div.innerText= data.list.main
+		const p = document.createElement('p')
+		p.setAttribute('id', "box")
+		rep.append(p)
+		p.append(div)
+	}
+
 	async function getData(){
 	const akey = 'a412a1788e338d0074a61750c01f41b8';
 	const value = city.value
@@ -14,7 +23,9 @@
 	function postData(){
 		getData().then(function(response){
 			response.json().then(function(data) {
-				console.log(data);
+			const div=document.createElement('div')
+			div.innerText= data.list.main
+			rep.append(div)
 		});
 	})
 	}
