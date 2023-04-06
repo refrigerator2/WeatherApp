@@ -8,10 +8,10 @@ const tm = document.getElementById('tempcheck')
 function createContent(request){
 		const div = document.createElement('div')
 		div.innerText= request;
-		const p = document.createElement('p')
-		p.setAttribute('id', "box")
-		rep.append(p)
-		p.append(div)
+		// const p = document.createElement('p')
+		div.setAttribute('id', "box")
+		// rep.append(p)
+		rep.append(div)
 }
 function postContent(data){
 	const tempcheck = document.getElementById('tempcheck')
@@ -34,20 +34,17 @@ function postContent(data){
 		 	createContent(value)
 		 }
 		 if(sunrise.checked){
-			value = data.city.sunrise
+			value = (data.city.sunrise / 3600)
 			createContent(value)
 		 }
-		 if(sunset.checked){
-			value = data.city.sunset
-			createContent(value)
-		 }
-		console.log(data)
+		value = data.list[0].weather.icon
+		createContent(value)
 		}
 
 async function getData(){
 const akey = 'a412a1788e338d0074a61750c01f41b8';
 const value = city.value
-const url = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&appid=${akey}`;
+const url = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=${akey}`;
 const dat = await fetch(url)
 	return dat;
 }
