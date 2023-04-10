@@ -9,10 +9,10 @@
     <body>
         <div class="head">
             <div class="name">WeatherApp<span class=""> | &nbsp</div>
-                <select id="language">
-                    <option value="en">English</option>
-                    <option value="ru">Русский</option>
-                    <option value="fr">Français</option>
+                <select id="units">
+                    <option value="metric">Metric</option>
+                    <option value="imperial">Imperial</option>
+                    <option value="standart">Standart</option>
                 </select>
             <div class="inputs">
                 <input id="city" class="city" placeholder="Please input your city">
@@ -25,13 +25,13 @@
         <input type="checkbox" id="tempcheck" class="checkbox" name="notifications" value="true">
             <label for="humcheck">Humidity</label>
         <input type="checkbox" id="humcheck" class="checkbox" name="notifications" value="true">
-            <label for="sunrise">Sunrise&Sunset</label>
-        <input type="checkbox" id="sunrise" class="checkbox" name="notifications" value="true">
+            <label for="wind">Wind characteristic</label>
+        <input type="checkbox" id="wind" class="checkbox" name="notifications" value="true">
             <label for="presscheck">Pressure</label>
         <input type="checkbox" id="presscheck" class="checkbox" name="notifications" value="true">
     </div>
 
-    <div id="rep"></content>
+    <div id="rep"></div>
     
         <script src="projectlogic.js"></script>
     </body>
