@@ -1,4 +1,6 @@
-
+const tempcheck = document.getElementById('tempcheck')
+const humcheck = document.getElementById('humcheck')
+const press = document.getElementById('presscheck') 
 const rep = document.getElementById('rep')
 const city = document.getElementById('city');
 const btn = document.getElementById("btn");
@@ -9,7 +11,6 @@ let units;
 
 unit.addEventListener('change', function(event){
 	units = event.target.value
-	console.log(units)
 })
 
 
@@ -20,16 +21,82 @@ function createContent(request){
 		rep.append(div)
 }
 
+function measurementSystem(data, value){
+	const request = data.list[0].main
+switch (units){
+case "metric":
+	switch (value){
+		case request.temp:
+			value += "&#176"+"C"
+		break;
+		case request.humidity:
+			value+="%"
+		break;
+		case request.pressure:
+			value+="hPa"
+			break;
+		case data.list[0].wind.deg:
+			value+="&#176"
+		break;
+		case data.list[0].wind.speed:
+			value+="meter/second"
+		break;
+		case data.list[0].wind.gust:
+			value+="meter/second"
+		break;
+	}
+	break;
+case "imperial":
+	switch (value){
+		case request.temp:
+			value += "&#176"+"F"
+		break;
+		case request.humidity:
+			value+="%"
+		break;
+		case request.pressure:
+			value+="hPa"
+			break;
+		case data.list[0].wind.deg:
+			value+="&#176"
+		break;
+		case data.list[0].wind.speed:
+			value+="miles/hour"
+		break;
+		case data.list[0].wind.gust:
+			value+="miles/hour"
+		break;
+	}
+	break;
+	case "standart":
+	switch (value){
+		case request.temp:
+			value += "K"
+		break;
+		case request.humidity:
+			value+="%"
+		break;
+		case request.pressure:
+			value+="hPa"
+			break;
+		case data.list[0].wind.deg:
+			value+="&#176"
+		break;
+		case data.list[0].wind.speed:
+			value+="meter/second"
+		break;
+		case data.list[0].wind.gust:
+			value+="meter/second"
+		break;
+	}
+	break;
+}
+}
 function postContent(data){
-	const tempcheck = document.getElementById('tempcheck')
-	const humcheck = document.getElementById('humcheck')
-	const sunrise = document.getElementById('sunrise')
-	const sunset = document.getElementById('sunrise')
-	const press = document.getElementById('presscheck') 
 	const request = data.list[0].main
 	let value
 		if(tempcheck.checked){
-			value = request.temp
+			value = measurementSystem(data, request.temp)
 			createContent(value)
 		}
 		if(humcheck.checked){
