@@ -19,9 +19,20 @@ function createContent(request){
 		const div = document.createElement('div')
 		div.innerText= request;
 		div.setAttribute('id', "box")
-		rep.append(div)
+		if(document.querySelector(div) = null){
+			rep.append(div)
+		}
+		else if(document.querySelector(div)!= null){
+			deleteContent(div)
+		}
 }
 
+function deleteContent(name){
+	const elem = document.querySelectorAll(name)
+		elem.orEach(function(userItem) {
+  			deleteUser(userItem);
+	});
+}
 function measurementSystem(data, value){
 	const request = data.list[0].main
 	switch (units){
@@ -99,23 +110,23 @@ function postContent(data){
 	const request = data.list[0].main
 	let value
 	if(tempcheck.checked){
-		value = measurementSystem(data, request.temp)	
+		value = "temperature:" +measurementSystem(data, request.temp)	
 		createContent(value)
 	}
 	if(humcheck.checked){
-		value = measurementSystem(data, request.humidity)
+		value = "humidity:" + measurementSystem(data, request.humidity)
 		createContent(value)
 	}
 	if(press.checked){
-		value = measurementSystem(data, request.pressure)
+		value = "pressure:" + measurementSystem(data, request.pressure)
 		createContent(value)
 	}
 	if(wind.checked){
-		value = measurementSystem(data, data.list[0].wind.deg)
+		value ="wind degree:" + measurementSystem(data, data.list[0].wind.deg)
 		createContent(value)
-		value = measurementSystem(data, data.list[0].wind.speed) 
+		value = "wind speed:" + measurementSystem(data, data.list[0].wind.speed) 
 		createContent(value)
-		value = measurementSystem(data, data.list[0].wind.gust)
+		value = "wind gust:" + measurementSystem(data, data.list[0].wind.gust)
 		createContent(value)
 	}
 	value = data.list[0].weather.icon
