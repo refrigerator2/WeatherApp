@@ -15,24 +15,14 @@ unit.addEventListener('change', function(event){
 })
 
 
-function createContent(request){
-		const div = document.createElement('div')
-		div.innerText= request;
-		div.setAttribute('id', "box")
-		if(document.querySelector(div) = null){
-			rep.append(div)
-		}
-		else if(document.querySelector(div)!= null){
-			deleteContent(div)
-		}
-}
-
-function deleteContent(name){
-	const elem = document.querySelectorAll(name)
-		elem.orEach(function(userItem) {
-  			deleteUser(userItem);
-	});
-}
+function createContent(request) {
+	//deleteContent();
+	const div = document.createElement('div');
+	div.innerHTML = request;
+	div.setAttribute('id', 'box');
+	rep.append(div);
+  }
+	
 function measurementSystem(data, value){
 	const request = data.list[0].main
 	switch (units){
@@ -129,7 +119,10 @@ function postContent(data){
 		value = "wind gust:" + measurementSystem(data, data.list[0].wind.gust)
 		createContent(value)
 	}
-	value = data.list[0].weather.icon
+	
+	value = data.list[0].weather[0].description
+	createContent(value)
+	value = `<img src = "https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png">`
 	createContent(value)
 }
 
