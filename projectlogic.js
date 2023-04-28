@@ -143,5 +143,11 @@ function postData(){
 	});
 })
 }
-
 btn.addEventListener('click', postData)
+
+city.addEventListener('keydown', function(event){
+	if(event.keyCode === 13){
+		event.preventDefault();
+		btn.click()
+	}
+})
