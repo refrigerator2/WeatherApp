@@ -11,11 +11,53 @@ label {
   display: inline-block;
   vertical-align: middle;
 }
-#box{
-  border: 1px solid #4CAF50;
+#prompt{
+  display: flex;
+  align-items: center;
+  justify-content:center;
 }
-.rep{
-  border: 1px solid #4CAF50
+#box {
+  background-color: aqua;
+  border: 1px solid #4caf89;
+  padding: 10px;
+  font-size: 16px;
+}
+.inputs{
+  width: 100%;
+  height:100%
+}
+
+#prompt {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#prompt {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+label {
+
+  font-size: 18px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+input.checkbox {
+  transform: scale(1.25);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+/* #rep{
+  
+}  */
+.head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 input[type=checkbox] {
   display: inline-block;
@@ -133,6 +175,7 @@ select:focus {
         cursor: pointer;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     }
+    
     }
 
 /* Стили для разрешения экрана 1024px */
@@ -143,6 +186,8 @@ select:focus {
     .inputs {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content:center;
         align-items: center;
       }
     .city {
