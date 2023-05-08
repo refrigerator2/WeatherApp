@@ -16,13 +16,23 @@ unit.addEventListener('change', function(event){
 
 
 function createContent(request) {
-	//deleteContent();
 	const div = document.createElement('div');
-	div.innerHTML = request;
-	div.setAttribute('id', 'box');
-	rep.append(div);
-  }
-	
+	if (document.querySelector('#box') !== null) {
+		deleteContent();
+		div.innerHTML = request;
+		div.setAttribute('id', 'box');
+		document.querySelector('#rep').appendChild(div);
+	} else {
+		div.innerHTML = request;
+		div.setAttribute('id', 'box');
+		document.querySelector('#rep').appendChild(div);
+	}
+}
+
+function deleteContent() {
+	const elem = document.querySelector('#rep');
+	elem.querySelectorAll('*').forEach((n) => n.remove());
+}
 function measurementSystem(data, value){
 	const request = data.list[0].main
 	switch (units){
