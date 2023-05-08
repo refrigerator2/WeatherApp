@@ -17,10 +17,25 @@ label {
   justify-content:center;
 }
 #box {
-  background-color: aqua;
-  border: 1px solid #4caf89;
-  padding: 10px;
-  font-size: 16px;
+  text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+}
+#block{
+  width:100%;
+  display:flex;
+  justify-content: center;
+}
+#rep{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  width: 50%;
 }
 .inputs{
   width: 100%;
@@ -51,9 +66,12 @@ input.checkbox {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-/* #rep{
-  
-}  */
+body{
+  background-image: url(https://abrakadabra.fun/uploads/posts/2021-12/1639922063_1-abrakadabra-fun-p-fon-dlya-pogodi-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .head{
   display: flex;
   justify-content: center;
@@ -87,7 +105,6 @@ select:focus {
     .name {
         font-size: 18px;
         }
-    
       
         .inputs {
             display: block;
@@ -129,10 +146,6 @@ select:focus {
         }
         
         
-        
-        
-
-/* Стили для разрешения экрана 768px */
 @media only screen and (min-width: 321px) and (max-width: 768px) {
     .name {
         font-size: 24px;
@@ -142,6 +155,7 @@ select:focus {
         flex-direction: column;
         margin-top: 20px;
     }
+  
     .city {
         width: 100%;
         margin-bottom: 20px;
@@ -178,7 +192,7 @@ select:focus {
     
     }
 
-/* Стили для разрешения экрана 1024px */
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .name {
       font-size: 28px;
@@ -190,6 +204,7 @@ select:focus {
         justify-content:center;
         align-items: center;
       }
+     
     .city {
       width: 40%;
       margin-right: 10px;
@@ -220,6 +235,7 @@ select:focus {
       align-items: center;
       margin-top: 40px;
     }
+   
     .city {
       width: 30%;
       margin-right: 10px;
@@ -234,6 +250,7 @@ select:focus {
     .name {
       font-size: 36px;
     }
+    
     .inputs {
       display: flex;
       flex-direction: row;
