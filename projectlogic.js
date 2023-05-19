@@ -30,8 +30,7 @@ function createContent(request) {
 }
 
 function deleteContent() {
-	const elem = document.querySelector('#rep');
-	elem.querySelectorAll('*').forEach((n) => n.remove());
+	
 }
 function measurementSystem(data, value){
 	const request = data.list[0].main
