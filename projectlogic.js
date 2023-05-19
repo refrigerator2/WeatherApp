@@ -17,16 +17,10 @@ unit.addEventListener('change', function(event){
 
 function createContent(request) {
 	const div = document.createElement('div');
-	if (document.querySelector('#box') !== null) {
-		deleteContent();
+		div.innerHTML = request;
 		div.innerHTML = request;
 		div.setAttribute('id', 'box');
 		document.querySelector('#rep').appendChild(div);
-	} else {
-		div.innerHTML = request;
-		div.setAttribute('id', 'box');
-		document.querySelector('#rep').appendChild(div);
-	}
 }
 
 function deleteContent() {
