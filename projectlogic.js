@@ -100,6 +100,7 @@ function measurementSystem(data, value){
 }
 
 function postContent(data){
+	rep.innerHTML=""
 	const request = data.list[0].main
 	let value
 	if(tempcheck.checked){
