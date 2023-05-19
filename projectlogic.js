@@ -24,7 +24,7 @@ function createContent(request) {
 }
 
 function deleteContent() {
-	
+	rep.innerHTML=""
 }
 function measurementSystem(data, value){
 	const request = data.list[0].main
@@ -100,7 +100,7 @@ function measurementSystem(data, value){
 }
 
 function postContent(data){
-	rep.innerHTML=""
+	deleteContent();
 	const request = data.list[0].main
 	let value
 	if(tempcheck.checked){
